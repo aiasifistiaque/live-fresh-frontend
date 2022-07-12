@@ -1,0 +1,90 @@
+@mixin btn-text-unselect {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+$desktop: 1008px;
+$tab: 640px;
+$small: 370px;
+$laptop: 850px;
+$xlarge: 1171px;
+
+@mixin phone {
+	@media (min-width:#{$small}) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media (min-width:#{$laptop}) {
+		@content;
+	}
+}
+
+@mixin tab {
+	@media (min-width:#{$tab}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width:#{$desktop}) {
+		@content;
+	}
+}
+
+@mixin hover {
+	@media (min-width:#{$desktop}) {
+		&:hover {
+			@content;
+		}
+	}
+}
+
+@mixin placeholder {
+	&::placeholder {
+		font-size: 12px;
+		font-weight: 600;
+		font-family: 'Montserrat', sans-serif;
+		margin: 0;
+		padding: 0;
+		letter-spacing: 0.2px;
+		color: #bdbdbd;
+	}
+}
+
+@mixin xlarge {
+	@media (min-width:#{$x-large}) {
+		@content;
+	}
+}
+
+@mixin flexCenter($direction: row) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: $direction;
+}
+
+@mixin pageFlexCenter($direction: column) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: $direction;
+	flex: 1;
+	width: 100%;
+}
+
+@mixin hideScrollbar() {
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}

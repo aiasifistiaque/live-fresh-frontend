@@ -1,0 +1,14 @@
+@import '../../../styles/imports';
+
+%page {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-height: 100vh;
+	max-width: 100vw;
+}
+
+.container {
+	@extend %page;
+	//background-color: #f9f9f9;
+}

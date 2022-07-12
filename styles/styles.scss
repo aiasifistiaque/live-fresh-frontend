@@ -1,0 +1,129 @@
+@import './imports';
+
+$font-family: 'Montserrat', sans-serif;
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	max-width: 100vw;
+	overflow-x: hidden;
+	font-family: 'Montserrat', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	font-family: $font-family;
+
+	cursor: pointer;
+	&:hover {
+		@include desktop {
+			text-decoration-line: underline;
+		}
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+p {
+	font-size: 0.85rem;
+	margin: 0px;
+	padding: 0px;
+	line-height: 1.5;
+	color: $color-text;
+	font-family: $font-family;
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 500;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	color: $color-text;
+	font-family: $font-family;
+
+	@include desktop {
+		font-size: 4rem;
+		line-height: 6rem;
+	}
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	color: $color-text;
+	font-family: $font-family;
+
+	@include desktop {
+		font-size: 3rem;
+		line-height: 4.5rem;
+	}
+}
+
+h3 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	color: $color-text;
+	font-family: $font-family;
+
+	@include desktop {
+		font-size: 2rem;
+		line-height: 3.75rem;
+	}
+}
+
+h4 {
+	font-size: 2rem;
+	font-weight: 500;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	color: $color-text;
+	font-family: $font-family;
+}
+
+h5 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	color: $color-text;
+	font-family: $font-family;
+}
+
+h6 {
+	font-size: 1rem;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	color: $color-text;
+	font-family: $font-family;
+}
+
+input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font-family: $font-family;
+}

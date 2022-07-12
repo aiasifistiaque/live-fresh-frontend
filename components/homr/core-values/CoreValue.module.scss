@@ -1,0 +1,70 @@
+@import '../../../styles/imports';
+
+.container {
+	flex: 1;
+	gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	align-items: center;
+	margin-bottom: 2rem;
+
+	text-align: center;
+	@include tab {
+		align-items: flex-start;
+		text-align: left;
+	}
+
+	.top {
+		@include tab {
+			width: 100%;
+		}
+
+		.image {
+			width: 100%;
+			border: none;
+			@include tab {
+				border-right: 0.2px solid $color-primary;
+			}
+
+			img {
+				height: 64px;
+				object-fit: contain;
+				margin-bottom: 1.25rem;
+			}
+		}
+		.text {
+		}
+	}
+	.bottom {
+		margin: 0.5rem 0;
+		width: 90%;
+
+		@include desktop {
+			width: 75%;
+		}
+		p {
+			line-height: 1.4;
+		}
+	}
+	&:last-child {
+		.image {
+			border-right: none;
+		}
+	}
+}
+
+.section {
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem;
+	margin: 2rem 0;
+	flex-direction: column;
+	@include tab {
+		flex-direction: row;
+		margin: 4rem 0;
+	}
+	@include desktop {
+		gap: 7rem;
+	}
+}

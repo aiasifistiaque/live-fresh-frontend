@@ -1,0 +1,35 @@
+@import '../../../../styles/imports';
+
+.button {
+	display: flex;
+	align-items: center;
+	align-self: center;
+	gap: 0.5rem;
+	@include btn-text-unselect;
+	cursor: pointer;
+	padding: 0.5rem;
+	border-radius: 4px;
+	transition: 0.1s;
+	@include tab {
+		align-self: flex-end;
+	}
+
+	p {
+		font-size: 1rem;
+		font-weight: 600;
+		text-transform: capitalize;
+		color: $color-primary;
+
+		.redSpan {
+			color: $color-primary;
+		}
+		.blackSpan {
+			color: $color-text;
+		}
+	}
+
+	img {
+		width: 24px;
+		object-fit: contain;
+	}
+}

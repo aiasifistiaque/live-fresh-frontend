@@ -1,0 +1,36 @@
+@import '../../../styles/imports';
+
+.container {
+	display: flex;
+	gap: 1rem;
+	margin: 2rem 0;
+	flex-direction: column;
+
+	@include tab {
+		flex-direction: row;
+		gap: 2rem;
+		margin: 4rem 0;
+	}
+}
+
+.card {
+	background-color: rgba(#f1f1f1, 0.58);
+	flex: 1;
+	align-items: center;
+	justify-self: center;
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	padding: 4rem 0;
+	border-radius: 0.25rem;
+	@include tab {
+		padding: 3rem 0 2rem 0;
+	}
+
+	.image {
+		img {
+			height: 100px;
+			object-fit: contain;
+		}
+	}
+}
