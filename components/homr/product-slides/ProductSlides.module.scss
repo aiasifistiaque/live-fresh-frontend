@@ -1,0 +1,29 @@
+@import '../../../styles/imports';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	//min-height: 100vh;
+	margin: 4rem auto;
+	width: 100%;
+
+	.title {
+		padding: 0 16px;
+		@media (min-width:#{1080px}) {
+			padding: 0 calc((100% - 1080px) / 2);
+		}
+	}
+}
+.cards {
+	display: flex;
+	justify-content: flex-start;
+	overflow-x: scroll;
+	padding: 0 16px;
+	gap: 1rem;
+	@media (min-width:#{1080px}) {
+		padding: 0 calc((100% - 1080px) / 2);
+	}
+	// @include desktop {
+	// 	padding: 0 128px;
+	// }
+}

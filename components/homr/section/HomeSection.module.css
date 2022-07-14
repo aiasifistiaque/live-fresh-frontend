@@ -668,10 +668,11 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 1080px;
   margin: 0 auto;
   padding: 16px;
   width: 100%;
+  max-width: 1080px;
+  margin-bottom: 5rem;
 }
 .container .title {
   display: flex;

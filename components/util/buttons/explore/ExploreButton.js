@@ -2,12 +2,19 @@ import Link from 'next/link';
 import React from 'react';
 import styles from './ExploreButton.module.css';
 
-const ExploreButton = ({ href, children }) => {
+const ExploreButton = ({ href, children, size }) => {
 	const text = children && children.split(' ');
+	const style = size
+		? size == 'small'
+			? styles.smallButton
+			: size == 'medium'
+			? styles.mediumButton
+			: size == 'medium' && styles.bigButton
+		: styles.bigButton;
 
 	return (
 		<Link href={href}>
-			<div className={styles.button}>
+			<div className={style}>
 				<p>
 					<span className={styles.blackSpan}>
 						{text.length > 2 ? `${text[0]} ${text[1]} ` : `${text[0]} `}

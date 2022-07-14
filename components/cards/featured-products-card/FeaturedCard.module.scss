@@ -1,0 +1,77 @@
+@import '../../../styles/imports';
+
+$box-shadow: 0px 4px 10px rgba(138, 123, 123, 0.15);
+
+.card {
+	display: flex;
+	flex-direction: column;
+	box-shadow: $box-shadow;
+	border-radius: 2px;
+	width: 49%;
+	//min-width: 242px;
+	margin-bottom: 0.5rem;
+	@include tab {
+		width: 242px;
+	}
+	.image {
+		border-top-left-radius: 2px;
+		border-top-right-radius: 2px;
+
+		img {
+			border-radius: inherit;
+			height: 160px;
+			width: 100%;
+			object-fit: cover;
+			@include tab {
+				height: 190px;
+			}
+		}
+	}
+	.main {
+		padding: 1rem 0.5rem;
+		text-align: center;
+		@include tab {
+			padding: 1rem 1.5rem;
+		}
+		p {
+			font-weight: 700;
+			margin-bottom: 0.75rem;
+		}
+		h6 {
+			font-size: 1.2rem;
+		}
+	}
+	.buttons {
+		display: flex;
+		%button {
+			flex: 1;
+			display: flex;
+			height: 34px;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			color: white;
+			p {
+				color: inherit;
+				font-size: 0.6rem;
+				font-weight: 700;
+				@include tab {
+					font-size: 0.7rem;
+				}
+			}
+		}
+		.selectButton {
+			@extend %button;
+			background-color: $color-text;
+			border-bottom-left-radius: 2px;
+		}
+		.addToCartButton {
+			@extend %button;
+			background-color: $color-primary;
+			border-bottom-right-radius: 2px;
+			p {
+				text-transform: uppercase;
+			}
+		}
+	}
+}

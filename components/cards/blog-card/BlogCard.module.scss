@@ -1,0 +1,59 @@
+@import '../../../styles/imports';
+
+$box-shadow: 0px 4px 10px rgba(138, 123, 123, 0.15);
+
+.card {
+	display: flex;
+	flex-direction: column;
+	border-radius: 2px;
+	margin-bottom: 0.5rem;
+	width: 49.5%;
+	@include desktop {
+		width: 24.25%;
+	}
+	.image {
+		border-top-left-radius: 2px;
+		border-top-right-radius: 2px;
+
+		img {
+			border-radius: inherit;
+			height: 140px;
+			width: 100%;
+			object-fit: cover;
+			border-radius: 2px;
+			@include tab {
+				height: 240px;
+			}
+			@include desktop {
+				height: 180px;
+			}
+		}
+	}
+	.main {
+		margin: 0.5rem 0 0.25rem 0;
+		h6 {
+			font-size: 1.1rem;
+			margin-bottom: 0.5rem;
+			@include tab {
+				font-size: 1.2rem;
+			}
+		}
+		p {
+			font-size: 0.8rem;
+			font-weight: 500;
+			margin-bottom: 0.8rem;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 3; /* number of lines to show */
+			line-clamp: 3;
+			-webkit-box-orient: vertical;
+		}
+	}
+	.button {
+		display: flex;
+		align-items: flex-end;
+		flex: 1;
+		justify-content: flex-end;
+	}
+}

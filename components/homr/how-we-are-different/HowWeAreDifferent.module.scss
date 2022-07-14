@@ -1,0 +1,50 @@
+@import '../../../styles/imports';
+
+.container {
+	margin: 2rem 0;
+	.table {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		.row {
+			display: flex;
+			align-items: center;
+			border-radius: 4px;
+			padding: 0.5rem 2rem;
+			@include tab {
+				padding: 1.5rem 2rem;
+			}
+			.item {
+				flex: 1;
+				h6 {
+					font-size: 0.9rem;
+					@include tab {
+						font-size: 1.1rem;
+					}
+					span {
+						color: $color-primary;
+					}
+				}
+				p {
+					font-weight: 600;
+					font-size: 0.8rem;
+					@include tab {
+						font-size: 0.95rem;
+					}
+				}
+			}
+			.image {
+				display: flex;
+				flex: 1;
+				align-items: center;
+				justify-content: flex-start;
+				margin-left: 4rem;
+				img {
+					width: 28px;
+					object-fit: contain;
+				}
+			}
+		}
+	}
+}

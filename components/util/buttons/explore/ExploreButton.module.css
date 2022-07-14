@@ -664,7 +664,7 @@
   padding-bottom: 128px;
 }
 
-.button {
+.bigButton {
   display: flex;
   align-items: center;
   align-self: center;
@@ -679,24 +679,61 @@
   transition: 0.1s;
 }
 @media (min-width: 640px) {
-  .button {
+  .bigButton {
     align-self: flex-end;
   }
 }
-.button p {
+.bigButton p {
   font-size: 1rem;
   font-weight: 600;
   text-transform: capitalize;
   color: red;
 }
-.button p .redSpan {
+.bigButton p .redSpan {
   color: red;
 }
-.button p .blackSpan {
+.bigButton p .blackSpan {
   color: #424242;
 }
-.button img {
-  width: 24px;
+.bigButton img {
+  width: 1.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.smallButton {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  gap: 0.5rem;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: 0.1s;
+}
+@media (min-width: 640px) {
+  .smallButton {
+    align-self: flex-end;
+  }
+}
+.smallButton p {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: red;
+}
+.smallButton p .redSpan {
+  color: red;
+}
+.smallButton p .blackSpan {
+  color: #424242;
+}
+.smallButton img {
+  width: 22px;
   -o-object-fit: contain;
      object-fit: contain;
 }/*# sourceMappingURL=ExploreButton.module.css.map */

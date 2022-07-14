@@ -664,131 +664,82 @@
   padding-bottom: 128px;
 }
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  max-width: 100vw;
-  overflow-x: hidden;
-  font-family: "Montserrat", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
+.card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 10px rgba(138, 123, 123, 0.15);
+  border-radius: 2px;
+  width: 49%;
+  min-width: 242px;
+  margin-bottom: 0.5rem;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
+@media (min-width: 640px) {
+  .card {
+    width: 242px;
+  }
+}
+.card .image {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.card .image img {
+  border-radius: inherit;
+  height: 160px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 640px) {
+  .card .image img {
+    height: 190px;
+  }
+}
+.card .main {
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+@media (min-width: 640px) {
+  .card .main {
+    padding: 1rem 1.5rem;
+  }
+}
+.card .main p {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.card .main h6 {
+  font-size: 1.2rem;
+}
+.card .buttons {
+  display: flex;
+}
+.card .buttons .addToCartButton, .card .buttons .selectButton {
+  flex: 1;
+  display: flex;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  color: white;
 }
-@media (min-width: 1008px) {
-  a:hover {
-    -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+.card .buttons .addToCartButton p, .card .buttons .selectButton p {
+  color: inherit;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+@media (min-width: 640px) {
+  .card .buttons .addToCartButton p, .card .buttons .selectButton p {
+    font-size: 0.7rem;
   }
 }
-
-* {
-  box-sizing: border-box;
+.card .buttons .selectButton {
+  background-color: #424242;
+  border-bottom-left-radius: 2px;
 }
-
-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+.card .buttons .addToCartButton {
+  background-color: red;
+  border-bottom-right-radius: 2px;
 }
-
-p {
-  font-size: 0.85rem;
-  margin: 0px;
-  padding: 0px;
-  line-height: 1.5;
-  color: #424242;
-  font-family: "Montserrat", sans-serif;
-}
-
-h1 {
-  font-size: 2rem;
-  font-weight: 500;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  color: #424242;
-  font-family: "Montserrat", sans-serif;
-}
-@media (min-width: 1008px) {
-  h1 {
-    font-size: 4rem;
-    line-height: 6rem;
-  }
-}
-
-h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  line-height: 2.5;
-  color: #424242;
-  font-family: "Montserrat", sans-serif;
-}
-@media (min-width: 1008px) {
-  h2 {
-    font-size: 2.5rem;
-    line-height: 4.5rem;
-  }
-}
-
-h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  color: #424242;
-  font-family: "Montserrat", sans-serif;
-}
-@media (min-width: 1008px) {
-  h3 {
-    font-size: 2rem;
-    line-height: 3.75rem;
-  }
-}
-
-h4 {
-  font-size: 2rem;
-  font-weight: 500;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  color: #424242;
-  font-family: "Montserrat", sans-serif;
-}
-
-h5 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  color: #424242;
-  font-family: "Montserrat", sans-serif;
-}
-
-h6 {
-  font-size: 1rem;
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  color: #424242;
-  font-family: "Montserrat", sans-serif;
-}
-
-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  font-family: "Montserrat", sans-serif;
-}/*# sourceMappingURL=styles.css.map */
+.card .buttons .addToCartButton p {
+  text-transform: uppercase;
+}/*# sourceMappingURL=ProductsCard.module.css.map */

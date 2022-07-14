@@ -1,0 +1,26 @@
+@import '../../../styles/imports';
+
+.container {
+	text-align: center;
+
+	@include tab {
+		text-align: left;
+		p {
+			font-size: 0.95rem;
+			line-height: 1.6;
+		}
+	}
+	.images {
+		display: flex;
+		justify-content: space-around;
+		margin: 2rem 0;
+		img {
+			width: 100px;
+			object-fit: contain;
+
+			@include tab {
+				width: 200px;
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+@import '../../../styles/imports';
+
+.container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+.cards {
+	display: flex;
+	gap: 2%;
+	margin: 2rem 0;
+	flex-wrap: wrap;
+	justify-content: center;
+	@include tab {
+		gap: 1rem;
+		margin: 4rem 0;
+	}
+}
