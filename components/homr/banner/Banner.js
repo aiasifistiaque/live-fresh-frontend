@@ -11,7 +11,7 @@ const Banner = () => {
 			style={{
 				backgroundImage: `url(${bg.src})`,
 				width: '100%',
-				height: '100%',
+				//height: '100%',
 			}}>
 			<div className={styles.main}>
 				<div className={styles.left}>
