@@ -703,6 +703,10 @@
 }
 .h2 h2 {
   line-height: 1.5;
+  color: red;
+}
+.h2 h2 span {
+  color: #424242;
 }
 .h2 .border {
   height: 5px;

@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import styles from './Styles.module.css';
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
 
 const Page = ({ title, children, landing, auth, onPageClick, blur }) => {
 	return (
@@ -21,13 +23,14 @@ const Page = ({ title, children, landing, auth, onPageClick, blur }) => {
 				setSidebar={e => setSidebar(e)}
 				sidebar={sidebar}
 			/> */}
+			<Header />
 
 			{/* <Sidebar barPressed={sidebar} /> */}
 
 			<main onClick={onPageClick} className={styles.container}>
 				{children}
 			</main>
-			{/* <Footer /> */}
+			<Footer />
 		</div>
 	);
 };

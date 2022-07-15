@@ -6,6 +6,7 @@ import Clients from '../components/homr/clients/Clients';
 import CoreValues from '../components/homr/core-values/CoreValues';
 import FeaturedProducts from '../components/homr/featured-products/FeaturedProducts';
 import HowWeAreDifferent from '../components/homr/how-we-are-different/HowWeAreDifferent';
+import Newsletter from '../components/homr/newsletter/Newsletter';
 import ProcurementCycle from '../components/homr/procurement-cycle/ProcurementCycle';
 import ProductSlides from '../components/homr/product-slides/ProductSlides';
 import HomeSection from '../components/homr/section/HomeSection';
@@ -32,7 +33,7 @@ const Homepage = () => {
 				button='Explore All Categories'>
 				<Categories />
 			</HomeSection>
-			<HomeSection>
+			<HomeSection bg>
 				<FeaturedProducts />
 			</HomeSection>
 			<ProductSlides title='Best Sellers' />
@@ -45,7 +46,7 @@ const Homepage = () => {
 				button='Explore Detailss'>
 				<HowWeAreDifferent />
 			</HomeSection>
-			<HomeSection title='Our Blog' href='/' button='Explore Our Blog'>
+			<HomeSection title='Our Blog' href='/' button='Explore Our Blog' bg>
 				<BlogSlides />
 			</HomeSection>
 			{/* <HomeSection title='What Our Clients are saying'>
@@ -57,7 +58,9 @@ const Homepage = () => {
 				button='Explore Details'>
 				<Clients />
 			</HomeSection>
-			<HomeSection>Newsletter</HomeSection>
+			<HomeSection bg>
+				<Newsletter />
+			</HomeSection>
 		</Page>
 	);
 };

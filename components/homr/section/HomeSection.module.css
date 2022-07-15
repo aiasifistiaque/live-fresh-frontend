@@ -667,12 +667,15 @@
 .container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   margin: 0 auto;
   padding: 16px;
   width: 100%;
   max-width: 1080px;
-  margin-bottom: 5rem;
+}
+@media (min-width: 640px) {
+  .container {
+    min-height: 100vh;
+  }
 }
 .container .title {
   display: flex;
@@ -698,6 +701,6 @@
 }
 @media (min-width: 1008px) {
   .container {
-    padding: 32px 16px;
+    padding: 64px 16px;
   }
 }/*# sourceMappingURL=HomeSection.module.css.map */

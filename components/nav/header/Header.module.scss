@@ -1,0 +1,29 @@
+@import '../../../styles/imports';
+
+.container {
+	display: flex;
+	height: 4rem;
+	align-items: center;
+	background-color: black;
+	padding: 0 16px;
+	color: white;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	@include tab {
+		padding: 0 64px;
+	}
+	.left {
+		flex: 1;
+		img {
+			width: 120px;
+			object-fit: contain;
+		}
+	}
+	.middle {
+		flex: 1;
+	}
+	.right {
+		flex: 1;
+	}
+}

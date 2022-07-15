@@ -665,7 +665,7 @@
 }
 
 .container {
-  margin: 2rem 0;
+  padding: 2rem 0;
 }
 .container .table {
   display: flex;
