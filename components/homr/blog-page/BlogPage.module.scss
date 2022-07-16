@@ -1,0 +1,26 @@
+@import '../../../styles/imports';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	//min-height: 100vh;
+	margin: 4rem auto;
+	width: 100%;
+
+	.title {
+		padding: 0 16px;
+		@include desktop {
+			padding: 0 128px;
+		}
+	}
+}
+.feature {
+	//background-color: whitesmoke;
+}
+.cards {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 1%;
+	margin-bottom: 2rem;
+}
