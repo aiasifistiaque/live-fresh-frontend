@@ -1,0 +1,34 @@
+@import '../../../styles/imports';
+
+.container {
+	display: flex;
+	flex-direction: column;
+
+	margin: 0 auto;
+	padding: 16px;
+	width: 100%;
+	max-width: 1080px;
+
+	.title {
+		display: flex;
+
+		margin-bottom: 1rem;
+		flex-direction: column;
+
+		h3 {
+			line-height: 1.5;
+			color: $color-primary;
+		}
+	}
+
+	@include desktop {
+		padding: 32px 16px;
+	}
+	p {
+		font-size: 0.95rem;
+		margin-bottom: 1rem;
+		line-height: 1.7;
+		letter-spacing: 0.25px;
+		font-weight: 500;
+	}
+}

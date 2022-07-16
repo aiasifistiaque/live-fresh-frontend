@@ -8,6 +8,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 4rem;
+		margin-bottom: 2rem;
 		@include tab {
 			flex-direction: row;
 		}
@@ -49,5 +50,10 @@
 		letter-spacing: 1px;
 		text-align: center;
 		padding: 0.25rem 0;
+		font-size: 0.6rem;
+
+		@include tab {
+			font-size: 0.8rem;
+		}
 	}
 }

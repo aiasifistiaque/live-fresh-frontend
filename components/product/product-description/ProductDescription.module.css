@@ -666,59 +666,105 @@
 }
 
 .container {
-  background-color: #ededed;
-  align-items: center;
-  justify-self: center;
-}
-.container .main {
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-  margin-bottom: 2rem;
+  gap: 2rem;
 }
-@media (min-width: 640px) {
-  .container .main {
+@media (min-width: 1008px) {
+  .container {
     flex-direction: row;
   }
 }
-.container .main .left {
-  flex: 1;
+.container .images {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  gap: 0.25rem;
+  flex-direction: column-reverse;
 }
-.container .main .left h6 {
-  margin-bottom: 0.25rem;
+@media (min-width: 1008px) {
+  .container .images {
+    flex-direction: row;
+  }
 }
-.container .main .right {
-  flex: 1;
-  justify-content: space-between;
+.container .images .secondary {
   display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 0.25rem;
+  overflow-x: scroll;
 }
-.container .main .right .section .items {
-  margin: 0.75rem 0;
+@media (min-width: 1008px) {
+  .container .images .secondary {
+    flex-direction: column;
+  }
 }
-.container .main .right .section .items p {
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
+.container .images .secondary img {
+  width: 76px;
+  height: 76px;
+  -o-object-fit: cover;
+     object-fit: cover;
   cursor: pointer;
 }
-.container .main .right .section .items p:hover {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+.container .images .primary img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
-.disclaimer p {
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-align: center;
-  padding: 0.25rem 0;
-  font-size: 0.6rem;
-}
-@media (min-width: 640px) {
-  .disclaimer p {
-    font-size: 0.8rem;
+@media (min-width: 1008px) {
+  .container .images .primary img {
+    width: 396px;
+    height: 396px;
   }
-}/*# sourceMappingURL=Footer.module.css.map */
+}
+.container .description .tags {
+  display: flex;
+  margin: 0.5rem 0;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.container .description .tags .tag {
+  margin-right: 1rem;
+}
+.container .description .tags .tag p {
+  font-weight: 700;
+  color: red;
+  line-height: 1;
+}
+.container .description .tags .tag p span {
+  color: #424242;
+}
+.container .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  border-top: 1px solid rgba(255, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+  padding: 0.5rem 0;
+}
+.container .price h4 {
+  font-weight: 800;
+}
+.container .price h4 span {
+  color: red;
+}
+@media (min-width: 1008px) {
+  .container .price h4 {
+    margin-left: 1rem;
+  }
+}
+.container .price .button {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  cursor: pointer;
+  padding: 0 1.5rem;
+}
+.container .price .button p {
+  color: whitesmoke;
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.9rem;
+}/*# sourceMappingURL=ProductDescription.module.css.map */

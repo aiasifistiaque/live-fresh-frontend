@@ -9,9 +9,9 @@ const Footer = () => {
 			<HomeSection>
 				<div className={styles.main}>
 					<div className={styles.left}>
-						<div>
+						{/* <div>
 							<H6>Contact Us</H6>
-						</div>
+						</div> */}
 						<div>
 							<h5>Live Fresh Agro</h5>
 						</div>
