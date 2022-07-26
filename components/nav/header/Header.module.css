@@ -736,6 +736,8 @@
 .location p,
 .location h5 {
   color: inherit;
+  margin: 0;
+  padding: 0;
 }
 .location h5 {
   font-size: 1.2rem;

@@ -748,6 +748,8 @@
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
 }
 
 .item {
