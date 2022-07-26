@@ -9,6 +9,8 @@
 
 	p {
 		font-size: 0.9rem;
+		margin: 0;
+		padding: 0;
 	}
 }
 
@@ -51,6 +53,8 @@
 	//font-family: 'Space Grotesk', sans-serif;
 	p {
 		color: whitesmoke;
+		margin: 0;
+		padding: 0;
 	}
 }
 
@@ -58,6 +62,8 @@
 	height: 36px;
 	p {
 		font-size: 0.8rem;
+		margin: 0;
+		padding: 0;
 	}
 }
 
@@ -130,6 +136,8 @@
 		color: white;
 		letter-spacing: 0.2px;
 		font-weight: 700;
+		margin: 0;
+		padding: 0;
 	}
 
 	@include hover {
@@ -163,6 +171,8 @@
 	cursor: pointer;
 	p {
 		font-weight: 600;
+		margin: 0;
+		padding: 0;
 	}
 	&:hover {
 		text-decoration-line: underline;
@@ -176,6 +186,8 @@
 	border: 1px solid $color-primary;
 	p {
 		font-weight: 600;
+		margin: 0;
+		padding: 0;
 	}
 	@include desktop {
 		&:hover {

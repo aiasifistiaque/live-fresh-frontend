@@ -677,6 +677,8 @@
 }
 .outlined p, .textButton p, .danger p, .secondary p, .loading p, .disabled p, .button p {
   font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
 }
 
 .outlined img, .textButton img, .danger img, .secondary img, .loading img, .disabled img, .button img {
@@ -712,6 +714,8 @@
 }
 .button p {
   color: whitesmoke;
+  margin: 0;
+  padding: 0;
 }
 
 .small {
@@ -719,6 +723,8 @@
 }
 .small p {
   font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
 }
 
 .disabled {
@@ -782,6 +788,8 @@
   color: white;
   letter-spacing: 0.2px;
   font-weight: 700;
+  margin: 0;
+  padding: 0;
 }
 @media (min-width: 1008px) {
   .danger:hover {
@@ -811,6 +819,8 @@
 }
 .textButton p {
   font-weight: 600;
+  margin: 0;
+  padding: 0;
 }
 .textButton:hover {
   -webkit-text-decoration-line: underline;
@@ -824,6 +834,8 @@
 }
 .outlined p {
   font-weight: 600;
+  margin: 0;
+  padding: 0;
 }
 @media (min-width: 1008px) {
   .outlined:hover {
