@@ -1,0 +1,11 @@
+{
+  "name": "Small Button",
+  "id": "1131126363913617896",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": [
+    "figma"
+  ],
+  "containsWidget": true,
+  "widgetApi": "1.0.0"
+}

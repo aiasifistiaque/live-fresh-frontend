@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from '../components/homr/banner/Banner';
+import BannerTwo from '../components/homr/bannertwo/BannerTwo';
 import BlogSlides from '../components/homr/blog-slides/BlogSlides';
 import Categories from '../components/homr/categories/Categories';
 import Clients from '../components/homr/clients/Clients';
@@ -15,8 +16,8 @@ import WhoWeAre from '../components/who-we-are/WhoWeAre';
 
 const Homepage = () => {
 	return (
-		<Page>
-			<Banner />
+		<Page landing>
+			<BannerTwo />
 			<HomeSection
 				title={'Our Core Values'}
 				button='Learn More about our values'
@@ -29,17 +30,19 @@ const Homepage = () => {
 			<WhoWeAre />
 			<HomeSection
 				title='Product Categories'
-				href='/'
+				href='/categories'
 				button='Explore All Categories'>
 				<Categories />
 			</HomeSection>
 			<HomeSection bg>
 				<FeaturedProducts />
 			</HomeSection>
-			<ProductSlides title='Best Sellers' />
-			<ProductSlides title='Boneless Cuts' />{' '}
-			<ProductSlides title='Frozen Items' />
-			<ProductSlides title='Marinated products' />
+			{/* <ProductSlides title='Best Sellers' /> */}
+			<ProductSlides title='All Products' category='all' />
+			<ProductSlides title='Beef Products' category='beef' />
+			<ProductSlides title='Our Chicken' category='chicken' />
+			{/* <ProductSlides title='Frozen Items' />
+			<ProductSlides title='Marinated products' /> */}
 			<HomeSection
 				title='How We Are Different'
 				href='/'

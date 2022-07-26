@@ -683,12 +683,81 @@
 .cards {
   display: flex;
   justify-content: flex-start;
-  overflow-x: scroll;
   padding: 0 16px;
   gap: 1rem;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.cards::-webkit-scrollbar {
+  width: 0 !important;
+}
+@media (min-width: 640px) {
+  .cards {
+    margin: 0 -12%;
+  }
 }
 @media (min-width: 1080px) {
   .cards {
     padding: 0 calc((100% - 1080px) / 2);
+  }
+}
+
+.arrows {
+  height: 200px;
+}
+
+.sectionArrows {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 8px;
+}
+
+.arrowIcon {
+  height: 14px;
+  color: #424242;
+}
+@media (min-width: 1008px) {
+  .arrowIcon {
+    height: 32px;
+  }
+}
+
+.arrows {
+  height: 40px;
+  width: 40px;
+  border-radius: 500px;
+  transition: 0.2s;
+  background-color: white;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: none;
+}
+.arrows:hover {
+  transform: none;
+}
+@media (min-width: 1008px) {
+  .arrows {
+    display: flex;
+  }
+  .arrows:hover {
+    background-color: white;
+    transform: scale(2);
   }
 }/*# sourceMappingURL=ProductSlides.module.css.map */

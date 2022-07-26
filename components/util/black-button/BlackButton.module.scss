@@ -1,0 +1,48 @@
+@import '../../../styles/imports';
+
+%buttonUtil {
+	display: inline-flex;
+	cursor: pointer;
+	@include btn-text-unselect;
+	margin: 0.25rem 0;
+	transition: 0.2s;
+}
+
+.container {
+	@extend %buttonUtil;
+	img {
+		width: 20px;
+		height: 20px;
+		margin-left: 4px;
+		object-fit: contain;
+	}
+	background-color: $color-text;
+	height: 42px;
+	align-items: center;
+	justify-content: center;
+	p {
+		color: whitesmoke;
+		font-weight: 600;
+		font-size: 1rem;
+		line-height: 1;
+		margin: 0;
+		padding: 0;
+	}
+	padding: 0 16px;
+	border-radius: 4px;
+	border: none;
+	font-family: 'Montserrat', sans-serif;
+
+	@include desktop {
+		&:hover {
+			background-color: lighten(black, 20%);
+		}
+	}
+	&:active {
+		background-color: lighten(black, 50%);
+	}
+}
+
+.fill {
+	width: 100%;
+}

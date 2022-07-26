@@ -1,0 +1,25 @@
+@import '../../../styles/imports';
+
+.container {
+	margin: 0.5rem 0;
+
+	@include tab {
+		border: 1px solid rgba($color-primary, 0.15);
+		padding: 1rem 2rem;
+		border-radius: 4px;
+		padding-bottom: 2rem;
+	}
+}
+
+.noStretch {
+	margin: 0.5rem 0;
+	display: flex;
+	flex-direction: column;
+	align-self: flex-start;
+
+	@include tab {
+		border: 1px solid rgba($color-primary, 0.15);
+		padding: 1.5em 2rem 0 2rem;
+		border-radius: 4px;
+	}
+}

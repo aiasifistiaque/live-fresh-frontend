@@ -1,0 +1,17 @@
+@import '../../styles/imports';
+
+.container {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+.horizontal {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	@include desktop {
+		flex-direction: row;
+		align-items: center;
+	}
+}

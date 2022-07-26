@@ -714,4 +714,23 @@
   background-color: red;
   width: 72px;
   border-radius: 10px;
+}
+
+.h3Page {
+  display: flex;
+  margin-bottom: 0.5rem;
+  flex-direction: column;
+}
+.h3Page h2 {
+  line-height: 1.5;
+  color: red;
+}
+.h3Page h2 span {
+  color: #424242;
+}
+.h3Page .border {
+  height: 5px;
+  background-color: red;
+  width: 72px;
+  border-radius: 10px;
 }/*# sourceMappingURL=Headers.module.css.map */

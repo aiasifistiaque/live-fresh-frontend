@@ -2,28 +2,107 @@
 
 .container {
 	display: flex;
-	height: 4rem;
+	//height: 4rem;
 	align-items: center;
-	background-color: black;
-	padding: 0 16px;
+	background-color: transparent;
+	//padding: 0 16px;
 	color: white;
 	position: fixed;
 	width: 100%;
 	z-index: 10;
+	justify-content: space-between;
 	@include tab {
-		padding: 0 64px;
+		//padding: 0 64px;
 	}
 	.left {
-		flex: 1;
-		img {
-			width: 120px;
-			object-fit: contain;
-		}
+		display: flex;
 	}
 	.middle {
-		flex: 1;
+		//flex: 1;
 	}
 	.right {
-		flex: 1;
+		display: flex;
+		//flex: 1;
+	}
+}
+
+.scrolled {
+	background-color: black;
+	transition: 0.3s;
+}
+
+.squareItem {
+	height: 4rem;
+	width: 4rem;
+	border: 1px solid rgba(white, 0.4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	img {
+		height: 1.25rem;
+		width: 1.25rem;
+		object-fit: contain;
+	}
+}
+
+.squareText {
+	min-width: 4rem;
+	border: 1px solid rgba(white, 0.4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	padding: 0 2rem;
+	color: inherit;
+	h6 {
+		color: inherit;
+	}
+	p {
+		color: inherit;
+		font-size: 1rem;
+	}
+}
+
+.location {
+	min-width: 4rem;
+	border: 1px solid rgba(white, 0.4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	padding: 0 2rem;
+	color: inherit;
+	gap: 1rem;
+	h6,
+	p,
+	h5 {
+		color: inherit;
+	}
+	h5 {
+		font-size: 1.2rem;
+		line-height: 1.2;
+		font-weight: 400;
+		text-transform: capitalize;
+	}
+	p {
+		font-size: 0.8rem;
+		font-weight: 600;
+		text-transform: capitalize;
+	}
+}
+
+.logo {
+	height: 4rem;
+	border: 1px solid rgba(white, 0.4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 1rem;
+	cursor: pointer;
+	img {
+		height: auto;
+		width: 72px;
+		object-fit: contain;
 	}
 }

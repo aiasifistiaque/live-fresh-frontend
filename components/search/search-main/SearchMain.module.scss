@@ -1,0 +1,25 @@
+@import '../../../styles/imports';
+
+.container {
+	display: flex;
+	width: 100%;
+	.cards {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem;
+	}
+}
+
+.cat {
+	width: 100%;
+	margin: 1rem 0 4rem 0;
+
+	.cards {
+		flex-wrap: wrap;
+		gap: 0.25rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+}

@@ -17,13 +17,78 @@
 .cards {
 	display: flex;
 	justify-content: flex-start;
-	overflow-x: scroll;
 	padding: 0 16px;
 	gap: 1rem;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	&::-webkit-scrollbar {
+		width: 0 !important;
+	}
+	overflow: scroll;
+	scroll-behavior: smooth;
+
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+
+	@include tab {
+		margin: 0 -12%;
+	}
+
 	@media (min-width:#{1080px}) {
 		padding: 0 calc((100% - 1080px) / 2);
 	}
 	// @include desktop {
 	// 	padding: 0 128px;
 	// }
+}
+
+.arrows {
+	height: 200px;
+}
+
+.sectionArrows {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	padding: 8px;
+}
+
+.arrowIcon {
+	height: 14px;
+	color: $color-text;
+
+	@include desktop {
+		height: 32px;
+	}
+}
+
+.arrows {
+	height: 40px;
+	width: 40px;
+	border-radius: 500px;
+	transition: 0.2s;
+	background-color: white;
+	backdrop-filter: blur(5px);
+	z-index: 9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	@include btn-text-unselect;
+	display: none;
+
+	&:hover {
+		transform: none;
+	}
+
+	@include desktop {
+		display: flex;
+		&:hover {
+			background-color: rgba(white, 1);
+			transform: scale(2);
+		}
+	}
 }

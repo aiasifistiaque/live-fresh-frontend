@@ -1,0 +1,29 @@
+@import '../../../styles/imports';
+
+.container {
+	display: flex;
+	align-items: center;
+
+	padding: 1rem 0;
+
+	.button {
+		background-color: $color-text;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		border-radius: 2px;
+		img {
+			height: 22px;
+			width: 22px;
+			object-fit: contain;
+		}
+	}
+	.main {
+		padding: 0 1rem;
+		p {
+			font-weight: 600;
+			font-size: 0.9rem;
+		}
+	}
+}

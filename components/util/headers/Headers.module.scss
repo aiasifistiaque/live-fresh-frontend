@@ -46,3 +46,23 @@
 		border-radius: 10px;
 	}
 }
+
+.h3Page {
+	display: flex;
+	margin-bottom: 0.5rem;
+	flex-direction: column;
+
+	h2 {
+		line-height: 1.5;
+		color: $color-primary;
+		span {
+			color: $color-text;
+		}
+	}
+	.border {
+		height: 5px;
+		background-color: $color-primary;
+		width: 72px;
+		border-radius: 10px;
+	}
+}

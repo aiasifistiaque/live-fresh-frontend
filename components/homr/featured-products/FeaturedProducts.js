@@ -4,8 +4,12 @@ import styles from './FeaturedProducts.module.css';
 import * as lib from '../../../lib/constants';
 import ProductsCard from '../../cards/products-card/ProductsCard';
 import FeaturedCard from '../../cards/featured-products-card/FeaturedCard';
+import { useGetProductsByCategoryQuery } from '../../../store/services/apiService';
 
 const FeaturedProducts = () => {
+	const { data, isFetching, isError } = useGetProductsByCategoryQuery({
+		category: 'all',
+	});
 	return (
 		<div className={styles.container}>
 			<H2>{'Featured Products & Specials'}</H2>
@@ -17,9 +21,10 @@ const FeaturedProducts = () => {
 				services and commitment to customers.
 			</p>
 			<div className={styles.cards}>
-				{lib.seeders.featuredProducts.map((item, i) => (
-					<FeaturedCard data={item} key={i} />
-				))}
+				{data &&
+					data.doc.map(
+						(item, i) => i < 4 && <FeaturedCard data={item} key={i} />
+					)}
 			</div>
 		</div>
 	);

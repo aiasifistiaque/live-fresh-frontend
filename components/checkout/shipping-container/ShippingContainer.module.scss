@@ -1,0 +1,47 @@
+@import '../../../styles/imports';
+
+.children {
+	margin: 0.5rem 0 2rem 0;
+}
+
+.items {
+	margin: 0.5rem 0;
+	@include desktop {
+		min-width: 600px;
+	}
+
+	gap: 1.5rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	.item {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.5rem;
+		.selector {
+			height: 16px;
+			width: 16px;
+			border: 1px solid $color-text;
+			border-radius: 99px;
+			margin-top: 0.25rem;
+		}
+		.selected {
+			height: 16px;
+			width: 16px;
+			border: 4px solid $color-text;
+			border-radius: 99px;
+			margin-top: 0.25rem;
+			background-color: $color-primary;
+		}
+		padding: 1rem 0.5rem;
+		padding-right: 1rem;
+		cursor: pointer;
+		border-radius: 10px;
+		@include hover {
+			background-color: whitesmoke;
+		}
+		p {
+			font-size: 0.95rem;
+		}
+	}
+}

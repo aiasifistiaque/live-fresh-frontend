@@ -19,7 +19,7 @@ $box-shadow: 0px 4px 10px rgba(138, 123, 123, 0.15);
 
 		img {
 			border-radius: inherit;
-			height: 160px;
+			height: 120px;
 			width: 100%;
 			object-fit: cover;
 			@include tab {
@@ -41,8 +41,17 @@ $box-shadow: 0px 4px 10px rgba(138, 123, 123, 0.15);
 			font-size: 1.2rem;
 		}
 	}
+	.top {
+		display: flex;
+
+		flex: 1;
+		align-items: flex-end;
+		justify-content: flex-end;
+		width: 100%;
+	}
 	.buttons {
 		display: flex;
+		width: 100%;
 		%button {
 			flex: 1;
 			display: flex;
@@ -64,6 +73,22 @@ $box-shadow: 0px 4px 10px rgba(138, 123, 123, 0.15);
 			@extend %button;
 			background-color: $color-text;
 			border-bottom-left-radius: 2px;
+			.selector {
+				display: flex;
+				width: 24px;
+				@include tab {
+					width: 40px;
+				}
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				@include btn-text-unselect;
+
+				p {
+					font-size: 1.4rem;
+					font-weight: 400;
+				}
+			}
 		}
 		.addToCartButton {
 			@extend %button;

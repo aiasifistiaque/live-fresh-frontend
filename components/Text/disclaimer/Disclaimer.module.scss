@@ -1,0 +1,12 @@
+@import '../../../styles/imports';
+
+.container {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	max-width: 80%;
+	margin: auto;
+	a {
+		color: $color-primary;
+	}
+}

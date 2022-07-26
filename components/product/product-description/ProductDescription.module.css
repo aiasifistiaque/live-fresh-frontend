@@ -744,6 +744,7 @@
 }
 .container .price h4 {
   font-weight: 800;
+  font-size: 1.5rem;
 }
 .container .price h4 span {
   color: red;
@@ -751,7 +752,47 @@
 @media (min-width: 1008px) {
   .container .price h4 {
     margin-left: 1rem;
+    font-size: 2rem;
   }
+}
+.container .price .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.15rem;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container .price .selectButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 42px;
+  gap: 0.25rem;
+}
+.container .price .selectButton .selector {
+  background-color: red;
+  width: 32px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  cursor: pointer;
+}
+.container .price .selectButton .selector p {
+  color: whitesmoke;
+  margin: 0;
+  padding: 0;
+}
+.container .price .selectButton p {
+  color: black;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
 }
 .container .price .button {
   background-color: black;
@@ -760,7 +801,7 @@
   justify-content: center;
   height: 42px;
   cursor: pointer;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
 }
 .container .price .button p {
   color: whitesmoke;

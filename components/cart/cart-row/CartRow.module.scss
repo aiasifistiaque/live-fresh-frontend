@@ -1,0 +1,10 @@
+@import '../../../styles/imports';
+
+.container {
+	//display: flex;
+	align-items: center;
+	display: grid;
+	grid-template-columns: 2fr 2fr 0fr;
+	padding: 0 0.5rem;
+	gap: 0.5rem;
+}

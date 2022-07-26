@@ -1,0 +1,16 @@
+@import '../../../styles/imports';
+
+.container {
+	.title {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+
+		@include tab {
+			flex-direction: row;
+			align-items: center;
+		}
+		.heading {
+		}
+	}
+}

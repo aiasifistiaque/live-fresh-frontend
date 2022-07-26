@@ -1,0 +1,38 @@
+@import '../../../styles/imports';
+
+.container {
+	width: 100%;
+
+	@include tab {
+		min-width: 260px;
+	}
+	.items {
+		margin: 1rem 0;
+		.item {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 1rem;
+			margin-top: 0.25rem;
+			p {
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+.summary {
+	width: 100%;
+
+	.items {
+		margin: 1rem 0;
+		border-top: 2px solid $color-text;
+		padding: 1rem 0;
+	}
+}
+
+.item {
+	margin-bottom: 1rem;
+	display: flex;
+	justify-content: space-between;
+}

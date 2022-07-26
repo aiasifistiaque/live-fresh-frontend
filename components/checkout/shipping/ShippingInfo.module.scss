@@ -1,0 +1,22 @@
+@import '../../../styles/imports';
+
+.modalHeader {
+	background-color: white;
+}
+
+.modalContent {
+	background-color: white;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	margin-bottom: 2rem;
+
+	//padding: 1rem 0;
+	@include desktop {
+		//padding: .rem 0;
+	}
+}
+
+.modalActions {
+	//background-color: white;
+	padding: 2rem;
+}

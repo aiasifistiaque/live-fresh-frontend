@@ -1,0 +1,120 @@
+@import '../../../styles/imports';
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+.container {
+	width: 100vw;
+	background-image: url('../../../public/test/hero.jpeg');
+	//height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.main {
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		padding: 16px;
+		width: 100%;
+		background-color: rgba(black, 0.3);
+		padding: 0 32px;
+		height: 100vh;
+
+		justify-content: center;
+		@include tab {
+			justify-content: flex-start;
+			//padding: 0 128px;
+		}
+
+		.left {
+			max-width: 1080px;
+			margin: auto;
+			width: 100%;
+			margin-top: 8rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			@include tab {
+				align-items: flex-start;
+			}
+
+			gap: 2rem;
+			flex: 1;
+			img {
+				width: 200px;
+				object-fit: contain;
+			}
+			h1 {
+				font-family: 'Caveat', sans-serif;
+				text-align: center;
+				@include tab {
+					text-align: left;
+				}
+				color: whitesmoke;
+				line-height: 0.75;
+				letter-spacing: 7%;
+				font-size: 48px;
+				text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.4);
+				span {
+					font-size: 72px;
+				}
+			}
+			.button {
+				width: 248px;
+				height: 52px;
+				background-color: whitesmoke;
+				align-items: center;
+				justify-content: center;
+				display: flex;
+
+				border-radius: 30px;
+				cursor: pointer;
+				p {
+					font-family: 'Caveat', sans-serif;
+					font-weight: 700;
+					font-size: 1.4rem;
+				}
+				@include hover {
+					background-color: black;
+					p {
+						color: whitesmoke;
+					}
+				}
+			}
+		}
+		.bottom {
+			max-width: 1080px;
+			margin: auto;
+			width: 100%;
+			display: flex;
+
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 1rem;
+
+			@include tab {
+				justify-content: flex-start;
+			}
+
+			p {
+				font-family: 'Caveat', sans-serif;
+				color: whitesmoke;
+				font-weight: 600;
+				font-size: 1rem;
+				@include tab {
+					letter-spacing: 2px;
+				}
+			}
+		}
+	}
+}
+
+.slider {
+	height: 50vh;
+
+	img {
+		width: 100%;
+		object-fit: cover;
+		height: 50vh;
+	}
+}

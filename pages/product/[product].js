@@ -1,17 +1,23 @@
+import { useRouter } from 'next/router';
 import React from 'react';
-import Categories from '../components/homr/categories/Categories';
-import Newsletter from '../components/homr/newsletter/Newsletter';
-import ProductSlides from '../components/homr/product-slides/ProductSlides';
-import HomeSection from '../components/homr/section/HomeSection';
-import Page from '../components/nav/page/Page';
-import PageSection from '../components/product/page-section/PageSection';
-import ProductDescription from '../components/product/product-description/PoductDescription';
+import Categories from '../../components/homr/categories/Categories';
+import Newsletter from '../../components/homr/newsletter/Newsletter';
+import ProductSlides from '../../components/homr/product-slides/ProductSlides';
+import HomeSection from '../../components/homr/section/HomeSection';
+import Page from '../../components/nav/page/Page';
+import PageSection from '../../components/product/page-section/PageSection';
+import ProductDescription from '../../components/product/product-description/PoductDescription';
+import { useGetProductByIdQuery } from '../../store/services/apiService';
 
-const product = () => {
+const Productpage = () => {
+	const router = useRouter();
+	const { product } = router.query;
+	const { data, isFetching, isError } = useGetProductByIdQuery(product);
+	if (isFetching || isError) return null;
 	return (
 		<Page>
 			<PageSection>
-				<ProductDescription />
+				<ProductDescription data={data} />
 			</PageSection>
 
 			<PageSection title='COOKING NOTES'>
@@ -62,4 +68,4 @@ const product = () => {
 	);
 };
 
-export default product;
+export default Productpage;

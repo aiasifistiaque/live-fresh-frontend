@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import styles from './ProductDescription.module.css';
+import * as lib from '../../../lib/constants';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../../store/slices/cartSlice';
+import { toast } from 'react-toastify';
+import Link from 'next/link';
 
-const data = {
+const dummy = {
 	_id: 2,
 	name: 'Live Fresh Premium Beef Bone-In [Approx 1kg]',
 	price: '699',
@@ -20,13 +25,35 @@ const data = {
 	tags: ['Hormone Free', 'No Antibiotics', 'Pasture Raised'],
 };
 
-const PoductDescription = () => {
-	const [img, setImg] = useState(data.displayImage);
+const PoductDescription = ({ data }) => {
+	const [img, setImg] = useState(dummy.displayImage);
+	const dispatch = useDispatch();
+
+	const [selected, setSelected] = useState(1);
+
+	const inc = () => {
+		setSelected(selected + 1);
+	};
+	const dec = () => {
+		selected > 1 && setSelected(selected - 1);
+	};
+	const addToCartPressed = () => {
+		dispatch(addToCart({ data, qty: selected }));
+		setSelected(1);
+		toast(
+			<div>
+				<p>{`${selected} ${data.unit} ${data.name} added to cart`}</p>
+				<Link href='/cart'>
+					<a style={{ color: 'red', fontSize: '.8rem' }}>View Cart</a>
+				</Link>
+			</div>
+		);
+	};
 	return (
 		<div className={styles.container}>
 			<div className={styles.images}>
 				<div className={styles.secondary}>
-					{data.images.map((item, i) => (
+					{dummy.images.map((item, i) => (
 						<img onClick={() => setImg(item)} src={item} alt={i} key={i} />
 					))}
 				</div>
@@ -36,24 +63,36 @@ const PoductDescription = () => {
 			</div>
 			<div className={styles.description}>
 				<div className={styles.title}>
-					<h5>{data.name}</h5>
+					<h5>{data?.name && data.name}</h5>
 				</div>
 				<div className={styles.tags}>
-					{data.tags.map((item, i) => (
-						<Tag key={i}>{item}</Tag>
-					))}
+					{data?.tags && data.tags.map((item, i) => <Tag key={i}>{item}</Tag>)}
 				</div>
 				<div className={styles.description}>
-					<p>{data.description}</p>
+					<p>{data?.description && data.description}</p>
 				</div>
 				<div className={styles.price}>
 					<h4>
-						<span>{data?.symbol && data.symbol}</span>
+						<span>৳</span>
 						{`${data?.price && data.price}/`}
 						<span>{data?.unit && data.unit}</span>
 					</h4>
-					<div className={styles.button}>
-						<p>ADD TO CART</p>
+					<div className={styles.buttons}>
+						<div className={styles.selectButton}>
+							<div className={styles.selector} onClick={dec}>
+								<p>-</p>
+							</div>
+
+							<p>
+								{selected} {data?.unit && data.unit}
+							</p>
+							<div className={styles.selector} onClick={inc}>
+								<p>+</p>
+							</div>
+						</div>
+						<div className={styles.button} onClick={addToCartPressed}>
+							<p>ADD TO CART</p>
+						</div>
 					</div>
 				</div>
 			</div>

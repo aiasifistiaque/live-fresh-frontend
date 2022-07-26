@@ -669,7 +669,6 @@
 .container {
   width: 100vw;
   background-image: url("../../../public/test/hero.jpeg");
-  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -682,7 +681,7 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   padding: 0 32px;
-  height: 100%;
+  height: 100vh;
   justify-content: center;
 }
 @media (min-width: 640px) {

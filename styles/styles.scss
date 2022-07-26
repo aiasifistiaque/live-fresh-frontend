@@ -2,6 +2,14 @@
 
 $font-family: 'Montserrat', sans-serif;
 
+.Toastify__toast {
+	border: 2px solid rgba($color-primary, 0.2) !important;
+	border-radius: 4px !important;
+	color: $color-text !important;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+
 html,
 body {
 	padding: 0;

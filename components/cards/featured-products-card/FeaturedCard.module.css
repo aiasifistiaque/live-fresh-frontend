@@ -684,7 +684,7 @@
 }
 .card .image img {
   border-radius: inherit;
-  height: 160px;
+  height: 120px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -710,8 +710,16 @@
 .card .main h6 {
   font-size: 1.2rem;
 }
+.card .top {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+}
 .card .buttons {
   display: flex;
+  width: 100%;
 }
 .card .buttons .addToCartButton, .card .buttons .selectButton {
   flex: 1;
@@ -735,6 +743,26 @@
 .card .buttons .selectButton {
   background-color: #424242;
   border-bottom-left-radius: 2px;
+}
+.card .buttons .selectButton .selector {
+  display: flex;
+  width: 24px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media (min-width: 640px) {
+  .card .buttons .selectButton .selector {
+    width: 40px;
+  }
+}
+.card .buttons .selectButton .selector p {
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 .card .buttons .addToCartButton {
   background-color: red;

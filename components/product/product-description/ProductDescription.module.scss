@@ -76,12 +76,51 @@
 
 		h4 {
 			font-weight: 800;
+			font-size: 1.5rem;
 
 			span {
 				color: $color-primary;
 			}
 			@include desktop {
 				margin-left: 1rem;
+				font-size: 2rem;
+			}
+		}
+		.buttons {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 0.15rem;
+			@include btn-text-unselect;
+		}
+		.selectButton {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex: 1;
+			height: 42px;
+			gap: 0.25rem;
+			.selector {
+				background-color: red;
+				width: 32px;
+				height: 42px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex: 1;
+				cursor: pointer;
+
+				p {
+					color: whitesmoke;
+					margin: 0;
+					padding: 0;
+				}
+			}
+			p {
+				color: black;
+				margin: 0;
+				padding: 0;
+				font-size: 1.2rem;
 			}
 		}
 		.button {
@@ -91,7 +130,7 @@
 			justify-content: center;
 			height: 42px;
 			cursor: pointer;
-			padding: 0 1.5rem;
+			padding: 0 1rem;
 			p {
 				color: whitesmoke;
 				margin: 0;

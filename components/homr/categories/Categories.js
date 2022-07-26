@@ -24,7 +24,7 @@ const Category = ({ item }) => {
 			<div className={styles.image}>
 				<img src={item.image} alt={item.name} />
 			</div>
-			<ShopNowButton href='/shop' />
+			<ShopNowButton href={`/categories?category=${item.name}`} />
 		</div>
 	);
 };

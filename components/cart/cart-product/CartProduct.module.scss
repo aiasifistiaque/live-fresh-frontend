@@ -1,0 +1,33 @@
+@import '../../../styles/imports';
+
+.container {
+	flex: 1;
+	padding: 0.5rem 0;
+	display: flex;
+	gap: 0.5rem;
+	flex-direction: column;
+
+	@include tab {
+		flex-direction: row;
+	}
+	.image {
+		img {
+			height: 64px;
+			width: 64px;
+			object-fit: cover;
+		}
+	}
+	.details {
+		a {
+			color: $color-primary;
+			font-size: 0.9rem;
+			font-weight: 600;
+		}
+		h6 {
+			cursor: pointer;
+			@include hover {
+				text-decoration-line: underline;
+			}
+		}
+	}
+}

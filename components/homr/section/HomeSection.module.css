@@ -673,11 +673,6 @@
   width: 100%;
   max-width: 1080px;
 }
-@media (min-width: 640px) {
-  .container {
-    min-height: 100vh;
-  }
-}
 .container .title {
   display: flex;
   align-items: center;

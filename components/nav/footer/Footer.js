@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import HomeSection from '../../homr/section/HomeSection';
 import H6 from '../../util/headers/H6';
@@ -51,12 +52,12 @@ const Footer = () => {
 						<Section
 							title='Navitation'
 							data={[
-								'Home',
-								'Categories',
-								'Search',
-								'Cart',
-								'About Us',
-								'Contact',
+								{ name: 'Home', href: '/' },
+								{ name: 'Categories', href: '/' },
+								{ name: 'Search', href: '/search' },
+								{ name: 'Cart', href: '/cart' },
+								{ name: 'About us', href: '/about' },
+								{ name: 'Blog', href: '/blog' },
 							]}
 						/>
 						<Section
@@ -83,7 +84,7 @@ const Section = ({ title, data }) => {
 			<h6>{title}</h6>
 			<div className={styles.items}>
 				{data.map((item, i) => (
-					<p key={i}>{item}</p>
+					<p key={i}>{item?.name ? item.name : item}</p>
 				))}
 			</div>
 		</div>
