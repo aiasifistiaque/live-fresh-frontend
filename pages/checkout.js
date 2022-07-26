@@ -6,7 +6,6 @@ import ShippingContainer from '../components/checkout/shipping-container/Shippin
 import ShippingInfo from '../components/checkout/shipping/ShippingInfo';
 import Page from '../components/nav/page/Page';
 import PageSection from '../components/util/page-section/PageSection';
-//import '../styles/styles.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeAddress } from '../store/slices/addressSlice';
 
