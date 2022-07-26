@@ -689,6 +689,8 @@
   font-weight: 600;
   text-transform: capitalize;
   color: red;
+  margin: 0;
+  padding: 0;
 }
 .bigButton p .redSpan {
   color: red;
@@ -726,6 +728,8 @@
   font-weight: 600;
   text-transform: capitalize;
   color: red;
+  margin: 0;
+  padding: 0;
 }
 .smallButton p .redSpan {
   color: red;
