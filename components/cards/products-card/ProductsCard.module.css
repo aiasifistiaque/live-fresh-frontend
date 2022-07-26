@@ -708,6 +708,8 @@
 .card .main p {
   font-weight: 700;
   margin-bottom: 0.75rem;
+  margin: 0;
+  padding: 0;
 }
 .card .main h6 {
   font-size: 1.2rem;
@@ -719,6 +721,8 @@
   .card .main:hover p {
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
+    margin: 0;
+    padding: 0;
   }
 }
 .card .buttons {
@@ -737,6 +741,8 @@
   color: inherit;
   font-size: 0.6rem;
   font-weight: 700;
+  margin: 0;
+  padding: 0;
 }
 @media (min-width: 640px) {
   .card .buttons .addToCartButton p, .card .buttons .selectButton p {
@@ -763,6 +769,8 @@
 .card .buttons .selectButton .selector p {
   font-size: 1.4rem;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 .card .buttons .addToCartButton {
   background-color: red;
@@ -770,4 +778,6 @@
 }
 .card .buttons .addToCartButton p {
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }/*# sourceMappingURL=ProductsCard.module.css.map */

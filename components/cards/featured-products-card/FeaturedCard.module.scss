@@ -36,9 +36,13 @@ $box-shadow: 0px 4px 10px rgba(138, 123, 123, 0.15);
 		p {
 			font-weight: 700;
 			margin-bottom: 0.75rem;
+			margin: 0;
+			padding: 0;
 		}
 		h6 {
 			font-size: 1.2rem;
+			margin: 0;
+			padding: 0;
 		}
 	}
 	.top {
@@ -61,6 +65,8 @@ $box-shadow: 0px 4px 10px rgba(138, 123, 123, 0.15);
 			cursor: pointer;
 			color: white;
 			p {
+				margin: 0;
+				padding: 0;
 				color: inherit;
 				font-size: 0.6rem;
 				font-weight: 700;
@@ -85,6 +91,8 @@ $box-shadow: 0px 4px 10px rgba(138, 123, 123, 0.15);
 				@include btn-text-unselect;
 
 				p {
+					margin: 0;
+					padding: 0;
 					font-size: 1.4rem;
 					font-weight: 400;
 				}
@@ -95,6 +103,8 @@ $box-shadow: 0px 4px 10px rgba(138, 123, 123, 0.15);
 			background-color: $color-primary;
 			border-bottom-right-radius: 2px;
 			p {
+				margin: 0;
+				padding: 0;
 				text-transform: uppercase;
 			}
 		}

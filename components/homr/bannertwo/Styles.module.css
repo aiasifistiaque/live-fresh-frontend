@@ -742,6 +742,8 @@
   font-family: "Caveat", sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
+  margin: 0;
+  padding: 0;
 }
 @media (min-width: 1008px) {
   .container .main .left .button:hover {
@@ -749,6 +751,8 @@
   }
   .container .main .left .button:hover p {
     color: whitesmoke;
+    margin: 0;
+    padding: 0;
   }
 }
 .container .main .bottom {

@@ -706,9 +706,13 @@
 .card .main p {
   font-weight: 700;
   margin-bottom: 0.75rem;
+  margin: 0;
+  padding: 0;
 }
 .card .main h6 {
   font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
 }
 .card .top {
   display: flex;
@@ -731,6 +735,8 @@
   color: white;
 }
 .card .buttons .addToCartButton p, .card .buttons .selectButton p {
+  margin: 0;
+  padding: 0;
   color: inherit;
   font-size: 0.6rem;
   font-weight: 700;
@@ -761,6 +767,8 @@
   }
 }
 .card .buttons .selectButton .selector p {
+  margin: 0;
+  padding: 0;
   font-size: 1.4rem;
   font-weight: 400;
 }
@@ -769,5 +777,7 @@
   border-bottom-right-radius: 2px;
 }
 .card .buttons .addToCartButton p {
+  margin: 0;
+  padding: 0;
   text-transform: uppercase;
 }/*# sourceMappingURL=FeaturedCard.module.css.map */

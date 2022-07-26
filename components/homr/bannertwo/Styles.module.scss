@@ -73,11 +73,15 @@
 					font-family: 'Caveat', sans-serif;
 					font-weight: 700;
 					font-size: 1.4rem;
+					margin: 0;
+					padding: 0;
 				}
 				@include hover {
 					background-color: black;
 					p {
 						color: whitesmoke;
+						margin: 0;
+						padding: 0;
 					}
 				}
 			}
@@ -101,6 +105,7 @@
 				color: whitesmoke;
 				font-weight: 600;
 				font-size: 1rem;
+
 				@include tab {
 					letter-spacing: 2px;
 				}
