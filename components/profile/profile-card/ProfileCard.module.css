@@ -724,6 +724,8 @@
   text-transform: capitalize;
   font-weight: 500;
   white-space: nowrap;
+  margin: 0;
+  padding: 0;
 }
 .container .bottom .placeholderOption {
   margin: 0.75rem 1rem;
