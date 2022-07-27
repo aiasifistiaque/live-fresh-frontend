@@ -2,6 +2,7 @@ import React from 'react';
 import HomeSection from '../section/HomeSection';
 import styles from './Styles.module.css';
 import bg from '../../../public/test/hero.jpeg';
+import Link from 'next/link';
 
 const BannerTwo = () => {
 	const style = { height: '90vh', marginTop: '4vh' };
@@ -24,9 +25,11 @@ const BannerTwo = () => {
 						<br />
 						<span>LIVE FRESH</span>
 					</h1>
-					<div className={styles.button}>
-						<p>SHOP NOW</p>
-					</div>
+					<Link href='/categories'>
+						<div className={styles.button}>
+							<p>SHOP NOW</p>
+						</div>
+					</Link>
 				</div>
 				<div className={styles.bottom}>
 					<p>Fresh {'&'} Safe Food for Building Better Future</p>
