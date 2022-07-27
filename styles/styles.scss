@@ -47,8 +47,8 @@ input {
 
 p {
 	font-size: 0.85rem;
-	margin: 0px;
-	padding: 0px;
+	margin: 0px !important;
+	padding: 0px !important;
 	line-height: 1.5;
 	color: $color-text;
 	font-family: $font-family;
