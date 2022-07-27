@@ -58,7 +58,6 @@ $border: 1px solid rgba(white, 0.2);
 
 .squareText {
 	min-width: 2rem;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -75,6 +74,7 @@ $border: 1px solid rgba(white, 0.2);
 	@include tab {
 		border: $border;
 		min-width: 4rem;
+		height: 4rem;
 	}
 }
 
