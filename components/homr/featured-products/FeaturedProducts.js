@@ -13,7 +13,7 @@ const FeaturedProducts = () => {
 	return (
 		<div className={styles.container}>
 			<H2>{'Featured Products & Specials'}</H2>
-			<p>
+			<p style={{ fontSize: '1rem' }}>
 				We conduct business with Ethics {'&'} Integrity. We are proud of the
 				products which we manufacture and the efforts we put into them. Our R{' '}
 				{'&'}D wing constantly put in great efforts to innovate in the field.

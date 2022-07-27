@@ -5,7 +5,7 @@ const H2 = ({ children }) => {
 	const text = children && children.split(' ');
 	return (
 		<div className={styles.h2}>
-			<h2>
+			<h2 style={{ fontWeight: 'bold' }}>
 				<span>{text[0]}</span>
 				{children.substring(text[0].length, children.length)}
 			</h2>
