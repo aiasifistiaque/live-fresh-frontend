@@ -5,6 +5,7 @@ import { userApi } from './services/apiService';
 import addressSlice from './slices/addressSlice';
 import authSlice from './slices/authSlice';
 import cartSlice from './slices/cartSlice';
+import locationSlice from './slices/locationSlice';
 import toastSlice from './slices/toastSlice';
 import toggleSlice from './slices/toggleSlice';
 
@@ -17,6 +18,7 @@ export const store = configureStore({
 		toast: toastSlice,
 		address: addressSlice,
 		toggle: toggleSlice,
+		location: locationSlice,
 
 		// toggle: toggleSlice,
 		[userApi.reducerPath]: userApi.reducer,

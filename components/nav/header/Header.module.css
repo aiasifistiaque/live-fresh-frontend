@@ -674,6 +674,12 @@
   width: 100%;
   z-index: 10;
   justify-content: space-between;
+  padding: 0 1rem;
+}
+@media (min-width: 640px) {
+  .container {
+    padding: 0;
+  }
 }
 .container .left {
   display: flex;
@@ -689,8 +695,7 @@
 
 .squareItem {
   height: 4rem;
-  width: 4rem;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  width: 2.5em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -702,10 +707,16 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media (min-width: 640px) {
+  .squareItem {
+    height: 4rem;
+    width: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
 
 .squareText {
-  min-width: 4rem;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  min-width: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -720,10 +731,15 @@
   color: inherit;
   font-size: 1rem;
 }
+@media (min-width: 640px) {
+  .squareText {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 4rem;
+  }
+}
 
 .location {
   min-width: 4rem;
-  border: 1px solid rgba(255, 255, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -731,6 +747,12 @@
   padding: 0 2rem;
   color: inherit;
   gap: 1rem;
+}
+@media (min-width: 640px) {
+  .location {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    height: 4rem;
+  }
 }
 .location h6,
 .location p,
@@ -753,12 +775,17 @@
 
 .logo {
   height: 4rem;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0 0.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem;
   cursor: pointer;
+}
+@media (min-width: 640px) {
+  .logo {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0 1rem;
+  }
 }
 .logo img {
   height: auto;

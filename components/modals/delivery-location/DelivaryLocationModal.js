@@ -24,6 +24,7 @@ const DeliveryLocationModal = ({
 	setCity,
 	area,
 	setArea,
+	selectLocation,
 }) => {
 	return (
 		<Modal
@@ -42,7 +43,7 @@ const DeliveryLocationModal = ({
 				<Select data={cityData} value={city} onChange={e => setCity(e)} />
 				<Select data={areaData} value={area} onChange={e => setArea(e)} />
 
-				<BlackButton fill small icon='arrow-white' onClick={hide}>
+				<BlackButton fill small icon='arrow-white' onClick={selectLocation}>
 					Submit
 				</BlackButton>
 			</Modal.Body>

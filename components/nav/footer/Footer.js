@@ -84,7 +84,9 @@ const Section = ({ title, data }) => {
 			<h6>{title}</h6>
 			<div className={styles.items}>
 				{data.map((item, i) => (
-					<p key={i}>{item?.name ? item.name : item}</p>
+					<div key={i} style={{ marginBottom: 8 }}>
+						<p>{item?.name ? item.name : item}</p>
+					</div>
 				))}
 			</div>
 		</div>
