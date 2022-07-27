@@ -46,7 +46,7 @@ const Homepage = () => {
 			<HomeSection
 				title='How We Are Different'
 				href='/'
-				button='Explore Detailss'>
+				button='Explore Details'>
 				<HowWeAreDifferent />
 			</HomeSection>
 			<HomeSection title='Our Blog' href='/' button='Explore Our Blog' bg>
