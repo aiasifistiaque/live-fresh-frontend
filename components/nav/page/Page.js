@@ -6,6 +6,7 @@ import Footer from '../footer/Footer';
 import useGetWindowScroll from '../../../hooks/useGetWindowScroll';
 import { ToastContainer, toast } from 'react-toastify';
 import { useSelector } from 'react-redux';
+import Sidebar from '../../nav/sidebar/Sidebar';
 
 const Page = ({ title, children, landing, auth, onPageClick, blur }) => {
 	const { scroll, scrollingDown } = useGetWindowScroll();
@@ -29,7 +30,7 @@ const Page = ({ title, children, landing, auth, onPageClick, blur }) => {
 				/>
 			</Head>
 
-			{/* <Sidebar barPressed={sidebar} /> */}
+			<Sidebar />
 
 			<main onClick={onPageClick} className={styles.container}>
 				<Header landing={landing} scroll={scroll} />

@@ -3,9 +3,11 @@ import ExploreButton from '../../util/buttons/explore/ExploreButton';
 import Red from '../../util/text/Red';
 import styles from './CartPage.module.css';
 import { useSelector } from 'react-redux';
+import useAuth from '../../../hooks/useAuth';
 
 const CartPage = ({ children }) => {
 	const { cartItems } = useSelector(state => state.cart);
+	const { isLoggedIn } = useAuth();
 	return (
 		<div className={styles.container}>
 			<div className={styles.title}>
@@ -15,7 +17,7 @@ const CartPage = ({ children }) => {
 					</h3>
 				</div>
 
-				{cartItems?.length && cartItems.length > 0 ? (
+				{isLoggedIn && cartItems?.length && cartItems.length > 0 ? (
 					<div className={styles.button}>
 						<ExploreButton href='/checkout'>Proceed to Checkout</ExploreButton>
 					</div>

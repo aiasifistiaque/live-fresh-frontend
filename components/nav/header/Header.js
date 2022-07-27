@@ -7,6 +7,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import useAuth from '../../../hooks/useAuth';
 import { setLocation } from '../../../store/slices/locationSlice';
 import LargeScreen from '../../util/large-screen/LargeScreen';
+import useLocation from '../../../hooks/useLocation';
+import {
+	expandSidebar,
+	shrinkSidebar,
+} from '../../../store/slices/toggleSlice';
 
 const Header = ({ landing, scroll }) => {
 	const [show, setShow] = useState(false);
@@ -15,13 +20,15 @@ const Header = ({ landing, scroll }) => {
 
 	const auth = useAuth();
 
+	const { sidebar } = useSelector(state => state.toggle);
+
 	return (
 		<div
 			className={`${styles.container} ${
-				(scroll > 200 || !landing) && styles.scrolled
+				(scroll > 200 || !landing || sidebar) && styles.scrolled
 			}`}>
 			<div className={styles.left}>
-				<SquareItem src='menu' />
+				<Toggle src={sidebar ? 'cancel' : 'menu'} />
 				{(!landing || scroll > 200) && <Logo />}
 				<LargeScreen>
 					<Location />
@@ -41,6 +48,20 @@ const Header = ({ landing, scroll }) => {
 				</LargeScreen>
 			</div>
 			<LoginModal show={show} hide={close} />
+		</div>
+	);
+};
+
+const Toggle = ({ src, href }) => {
+	const dispatch = useDispatch();
+	const { sidebar } = useSelector(state => state.toggle);
+	return (
+		<div
+			className={styles.squareItem}
+			onClick={() =>
+				sidebar ? dispatch(shrinkSidebar()) : dispatch(expandSidebar())
+			}>
+			<img src={`/icons/${src}.svg`} alt='..' />
 		</div>
 	);
 };
@@ -77,19 +98,14 @@ const Location = ({ children }) => {
 	const [city, setCity] = useState();
 	const [area, setArea] = useState();
 
-	const { location } = useSelector(state => state.location);
+	//const { location } = useSelector(state => state.location);
+	const { location } = useLocation();
+
 	const dispatch = useDispatch();
 
 	const [show, setShow] = useState(false);
 	const open = () => setShow(true);
 	const close = () => setShow(false);
-
-	useEffect(() => {
-		if (location != null) {
-			setArea(location.area);
-			setCity(location.city);
-		}
-	}, [location]);
 
 	const selectLocation = () => {
 		if (area && city) {
@@ -103,8 +119,8 @@ const Location = ({ children }) => {
 			<div className={styles.location} onClick={open}>
 				<img src='/icons/location.svg' alt='..' />
 				<div>
-					<h5>{location?.city ? location.city : 'Please Select'}</h5>
-					<p>{location?.area ? location.area : 'Please Select'}</p>
+					<h5>{location?.area ? location.city : 'Please Select'}</h5>
+					<p>{location?.city ? location.area : 'Please Select'}</p>
 				</div>
 			</div>
 			<DeliveryLocationModal

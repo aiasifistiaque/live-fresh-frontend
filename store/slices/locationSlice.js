@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { CUSTOMER_LOCATION, TOKEN_NAME } from '../../lib/constants';
+import { createWrapper, HYDRATE } from 'next-redux-wrapper';
 
 export const locationSlice = createSlice({
 	name: 'location',
@@ -18,6 +19,15 @@ export const locationSlice = createSlice({
 			};
 			localStorage.setItem(CUSTOMER_LOCATION, JSON.stringify(loc));
 			state.location = loc;
+		},
+	},
+	extraReducers: {
+		[HYDRATE]: (state, action) => {
+			console.log('HYDRATE', state, action.payload);
+			return {
+				...state,
+				...action.payload.location,
+			};
 		},
 	},
 });

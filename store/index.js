@@ -9,6 +9,8 @@ import locationSlice from './slices/locationSlice';
 import toastSlice from './slices/toastSlice';
 import toggleSlice from './slices/toggleSlice';
 
+import { createWrapper, Context, HYDRATE } from 'next-redux-wrapper';
+
 // import toggleSlice from './slices/toggledSlice';
 
 export const store = configureStore({
