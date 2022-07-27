@@ -694,6 +694,7 @@
   background-color: red;
   width: 72px;
   border-radius: 10px;
+  font-weight: bold !important;
 }
 @media (min-width: 1008px) {
   .container {
