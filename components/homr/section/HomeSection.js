@@ -9,7 +9,7 @@ const HomeSection = ({ children, title, button, href, bg }) => {
 			<div className={styles.container}>
 				{title && (
 					<div className={styles.title}>
-						<h2>{title}</h2>
+						<h2 style={{ fontWeight: 'bold' }}>{title}</h2>
 						<div className={styles.border} />
 					</div>
 				)}
